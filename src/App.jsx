@@ -43,6 +43,9 @@ function App() {
     },
   ];
 
+  const loanUrl = 'https://migoc-mymoney.vercel.app/online-loan-application';
+  const balanceUrl = 'https://migoc-mymoney.vercel.app/customer-login';
+
   return (
     <div className="min-h-screen bg-white text-[#0a1f44] font-sans">
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur">
@@ -94,14 +97,18 @@ function App() {
 
               <div className="mt-12 flex flex-col gap-5 sm:flex-row">
                 <a
-                  href="#apply"
+                  href={loanUrl}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-[#0a1f44] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-[#165bbd]"
                 >
                   Apply for Loan
                 </a>
 
                 <a
-                  href="#balance"
+                  href={balanceUrl}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full border border-gray-300 px-8 py-4 text-sm font-semibold text-[#0a1f44] transition duration-300 hover:border-[#165bbd] hover:text-[#165bbd]"
                 >
                   Check Balance
@@ -194,7 +201,9 @@ function App() {
 
               <div className="mt-8">
                 <a
-                  href="#contact"
+                  href={loanUrl}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-[#0a1f44] transition hover:bg-blue-50"
                 >
                   Begin Application
@@ -220,7 +229,9 @@ function App() {
 
               <div className="mt-8">
                 <a
-                  href="#contact"
+                  href={balanceUrl}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full border border-gray-300 px-8 py-4 text-sm font-semibold text-[#0a1f44] transition hover:border-[#165bbd] hover:text-[#165bbd]"
                 >
                   Open Balance Access
