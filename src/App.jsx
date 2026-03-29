@@ -45,6 +45,7 @@ function App() {
 
   const loanUrl = '/apply';
   const balanceUrl = '/balance';
+  const staffUrl = '/app';
 
   return (
     <div className="min-h-screen bg-white text-[#0a1f44] font-sans">
@@ -68,9 +69,16 @@ function App() {
           <nav className="hidden items-center gap-8 text-sm font-bold text-gray-600 md:flex">
             <a href="#home" className="transition hover:text-[#165bbd]">Home</a>
             <a href="#services" className="transition hover:text-[#165bbd]">Services</a>
-            <a href="#apply" className="transition hover:text-[#165bbd]">Apply</a>
-            <a href="#balance" className="transition hover:text-[#165bbd]">Check Balance</a>
+            <a href={loanUrl} className="transition hover:text-[#165bbd]">Apply</a>
+            <a href={balanceUrl} className="transition hover:text-[#165bbd]">Check Balance</a>
             <a href="#contact" className="transition hover:text-[#165bbd]">Contact</a>
+
+            <a
+              href={staffUrl}
+              className="inline-flex items-center justify-center rounded-full bg-[#0a1f44] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#165bbd]"
+            >
+              Staff Login
+            </a>
           </nav>
         </div>
       </header>
@@ -97,14 +105,14 @@ function App() {
 
               <div className="mt-12 flex flex-col gap-5 sm:flex-row">
                 <a
-                  href="/apply"
+                  href={loanUrl}
                   className="inline-flex items-center justify-center rounded-full bg-[#0a1f44] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-[#165bbd]"
                 >
                   Apply for Loan
                 </a>
 
                 <a
-                  href="/balance"
+                  href={balanceUrl}
                   className="inline-flex items-center justify-center rounded-full border border-gray-300 px-8 py-4 text-sm font-semibold text-[#0a1f44] transition duration-300 hover:border-[#165bbd] hover:text-[#165bbd]"
                 >
                   Check Balance
@@ -276,6 +284,32 @@ function App() {
                     Loan applications and balance check portal
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="pb-20">
+          <div className="mx-auto max-w-7xl px-6 md:px-10">
+            <div className="rounded-[2.5rem] border border-gray-100 bg-[#0a1f44] p-10 text-white shadow-sm md:p-14">
+              <p className="text-[11px] font-black uppercase tracking-[0.3em] text-blue-200">
+                Staff Access
+              </p>
+              <h3 className="mt-4 max-w-3xl text-3xl font-black tracking-tight md:text-5xl">
+                Secure staff login for daily financial operations.
+              </h3>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-blue-100">
+                Authorized staff can access the My Money operations system for teller work,
+                reporting, and administrative control.
+              </p>
+
+              <div className="mt-8">
+                <a
+                  href={staffUrl}
+                  className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-[#0a1f44] transition hover:bg-blue-50"
+                >
+                  Open Staff System
+                </a>
               </div>
             </div>
           </div>
