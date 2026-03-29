@@ -1,3 +1,5 @@
+import logo from './assets/mymoney.png';
+
 function App() {
   const services = [
     {
@@ -44,12 +46,20 @@ function App() {
   return (
     <div className="min-h-screen bg-white text-[#0a1f44] font-sans">
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10">
-          <div>
-            <h1 className="text-2xl font-black tracking-tight md:text-3xl">MIGoC</h1>
-            <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-gray-400">
-              TrustCash Financial Services
-            </p>
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
+          <div className="flex items-center gap-3 md:gap-4">
+            <img
+              src={logo}
+              alt="My Money Logo"
+              className="h-12 w-12 rounded-xl object-contain md:h-14 md:w-14"
+            />
+
+            <div>
+              <h1 className="text-2xl font-black tracking-tight md:text-3xl">MIGoC</h1>
+              <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-gray-400 md:text-[10px]">
+                My Money Financial Services
+              </p>
+            </div>
           </div>
 
           <nav className="hidden items-center gap-8 text-sm font-bold text-gray-600 md:flex">
@@ -63,24 +73,21 @@ function App() {
       </header>
 
       <main>
-        <section
-          id="home"
-          className="relative overflow-hidden"
-        >
+        <section id="home" className="relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(22,91,189,0.08),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(10,31,68,0.06),transparent_35%)]" />
 
-          <div className="relative mx-auto max-w-7xl px-6 pb-28 pt-28 md:px-10 md:pb-36 md:pt-32">
+          <div className="relative mx-auto max-w-7xl px-6 pb-28 pt-24 md:px-10 md:pb-36 md:pt-32">
             <div className="max-w-4xl">
               <p className="text-[11px] font-black uppercase tracking-[0.35em] text-[#165bbd]">
                 Modern Financial Access
               </p>
 
               <h2 className="mt-6 max-w-5xl text-5xl font-black leading-[0.92] tracking-tight text-[#0a1f44] md:text-7xl">
-                Clean, secure financial services for everyday business.
+                Powering everyday finance with speed, trust, and control.
               </h2>
 
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-gray-500 md:text-xl">
-                MIGoC delivers trusted financial operations including Mobile Money,
+                MIGoC My Money delivers trusted financial operations including Mobile Money,
                 Remittance, Microfinance, Foreign Exchange, and transparent service
                 management for customers and businesses.
               </p>
