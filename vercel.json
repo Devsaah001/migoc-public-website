@@ -1,16 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/app/:path*",
-      "destination": "https://migoc-mymoney.vercel.app/:path*"
-    },
-    {
-      "source": "/apply",
-      "destination": "https://migoc-mymoney.vercel.app/online-loan-application"
-    },
-    {
-      "source": "/balance",
-      "destination": "https://migoc-mymoney.vercel.app/customer-login"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
