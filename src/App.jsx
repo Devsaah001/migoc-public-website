@@ -43,9 +43,9 @@ function App() {
     },
   ];
 
-  const loanUrl = '/apply';
-  const balanceUrl = '/balance';
-  const staffUrl = '/app';
+  const loanUrl = 'https://app.migoclr.com/online-loan-application';
+  const balanceUrl = 'https://app.migoclr.com/customer-login';
+  const staffUrl = 'https://app.migoclr.com';
 
   return (
     <div className="min-h-screen bg-white text-[#0a1f44] font-sans">
