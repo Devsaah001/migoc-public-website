@@ -50,36 +50,47 @@ function App() {
   return (
     <div className="min-h-screen bg-white text-[#0a1f44] font-sans">
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-          <div className="flex items-center gap-3 md:gap-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 md:px-10">
+          <div className="flex min-w-0 items-center gap-3 md:gap-4">
             <img
               src={logo}
               alt="My Money Logo"
               className="h-12 w-12 rounded-xl object-contain md:h-14 md:w-14"
             />
 
-            <div>
-              <h1 className="text-2xl font-black tracking-tight md:text-3xl">MIGoC</h1>
-              <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-gray-400 md:text-[10px]">
+            <div className="min-w-0">
+              <h1 className="truncate text-2xl font-black tracking-tight md:text-3xl">
+                MIGoC
+              </h1>
+              <p className="truncate text-[9px] font-bold uppercase tracking-[0.22em] text-gray-400 md:text-[10px] md:tracking-[0.28em]">
                 My Money Financial Services
               </p>
             </div>
           </div>
 
-          <nav className="hidden items-center gap-8 text-sm font-bold text-gray-600 md:flex">
-            <a href="#home" className="transition hover:text-[#165bbd]">Home</a>
-            <a href="#services" className="transition hover:text-[#165bbd]">Services</a>
-            <a href={loanUrl} className="transition hover:text-[#165bbd]">Apply</a>
-            <a href={balanceUrl} className="transition hover:text-[#165bbd]">Check Balance</a>
-            <a href="#contact" className="transition hover:text-[#165bbd]">Contact</a>
-
+          <div className="flex items-center gap-3">
             <a
               href={staffUrl}
-              className="inline-flex items-center justify-center rounded-full bg-[#0a1f44] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#165bbd]"
+              className="inline-flex items-center justify-center rounded-full bg-[#0a1f44] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#165bbd] md:hidden"
             >
               Staff Login
             </a>
-          </nav>
+
+            <nav className="hidden items-center gap-8 text-sm font-bold text-gray-600 md:flex">
+              <a href="#home" className="transition hover:text-[#165bbd]">Home</a>
+              <a href="#services" className="transition hover:text-[#165bbd]">Services</a>
+              <a href={loanUrl} className="transition hover:text-[#165bbd]">Apply</a>
+              <a href={balanceUrl} className="transition hover:text-[#165bbd]">Check Balance</a>
+              <a href="#contact" className="transition hover:text-[#165bbd]">Contact</a>
+
+              <a
+                href={staffUrl}
+                className="inline-flex items-center justify-center rounded-full bg-[#0a1f44] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#165bbd]"
+              >
+                Staff Login
+              </a>
+            </nav>
+          </div>
         </div>
       </header>
 
@@ -87,23 +98,23 @@ function App() {
         <section id="home" className="relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(22,91,189,0.08),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(10,31,68,0.06),transparent_35%)]" />
 
-          <div className="relative mx-auto max-w-7xl px-6 pb-28 pt-24 md:px-10 md:pb-36 md:pt-32">
+          <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-16 md:px-10 md:pb-36 md:pt-32">
             <div className="max-w-4xl">
               <p className="text-[11px] font-black uppercase tracking-[0.35em] text-[#165bbd]">
                 Modern Financial Access
               </p>
 
-              <h2 className="mt-6 max-w-5xl text-5xl font-black leading-[0.92] tracking-tight text-[#0a1f44] md:text-7xl">
+              <h2 className="mt-6 max-w-5xl text-4xl font-black leading-[0.98] tracking-tight text-[#0a1f44] sm:text-5xl md:text-7xl">
                 Powering everyday finance with speed, trust, and control.
               </h2>
 
-              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-gray-500 md:text-xl">
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-gray-500 sm:text-lg md:mt-8 md:text-xl">
                 MIGoC My Money delivers trusted financial operations including Mobile Money,
                 Remittance, Microfinance, Foreign Exchange, and transparent service
                 management for customers and businesses.
               </p>
 
-              <div className="mt-12 flex flex-col gap-5 sm:flex-row">
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row md:mt-12 md:gap-5">
                 <a
                   href={loanUrl}
                   className="inline-flex items-center justify-center rounded-full bg-[#0a1f44] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-[#165bbd]"
@@ -118,11 +129,20 @@ function App() {
                   Check Balance
                 </a>
               </div>
+
+              <div className="mt-4 md:hidden">
+                <a
+                  href={staffUrl}
+                  className="inline-flex items-center justify-center rounded-full border border-[#0a1f44] px-8 py-4 text-sm font-semibold text-[#0a1f44] transition duration-300 hover:border-[#165bbd] hover:text-[#165bbd]"
+                >
+                  Staff Login
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="services" className="bg-[#f7f9fc] py-24">
+        <section id="services" className="bg-[#f7f9fc] py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6 md:px-10">
             <div className="mb-14 max-w-2xl">
               <p className="text-[11px] font-black uppercase tracking-[0.35em] text-[#165bbd]">
@@ -155,7 +175,7 @@ function App() {
           </div>
         </section>
 
-        <section className="py-24">
+        <section className="py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6 md:px-10">
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
               <div>
@@ -192,7 +212,7 @@ function App() {
 
         <section id="apply" className="py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6 md:px-10">
-            <div className="rounded-[2.5rem] bg-[#0a1f44] p-10 text-white md:p-14">
+            <div className="rounded-[2.5rem] bg-[#0a1f44] p-8 text-white md:p-14">
               <p className="text-[11px] font-black uppercase tracking-[0.3em] text-blue-200">
                 Loan Application
               </p>
@@ -217,7 +237,7 @@ function App() {
 
         <section id="balance" className="pb-20 md:pb-24">
           <div className="mx-auto max-w-7xl px-6 md:px-10">
-            <div className="rounded-[2.5rem] border border-gray-100 bg-white p-10 shadow-sm md:p-14">
+            <div className="rounded-[2.5rem] border border-gray-100 bg-white p-8 shadow-sm md:p-14">
               <p className="text-[11px] font-black uppercase tracking-[0.3em] text-[#165bbd]">
                 Customer Access
               </p>
@@ -291,7 +311,7 @@ function App() {
 
         <section className="pb-20">
           <div className="mx-auto max-w-7xl px-6 md:px-10">
-            <div className="rounded-[2.5rem] border border-gray-100 bg-[#0a1f44] p-10 text-white shadow-sm md:p-14">
+            <div className="rounded-[2.5rem] border border-gray-100 bg-[#0a1f44] p-8 text-white shadow-sm md:p-14">
               <p className="text-[11px] font-black uppercase tracking-[0.3em] text-blue-200">
                 Staff Access
               </p>
@@ -318,7 +338,7 @@ function App() {
 
       <footer className="border-t border-gray-100 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-gray-400 md:flex-row md:items-center md:justify-between md:px-10">
-          <p>© 2026 MIGoC My Money Financial Services. All rights reserved.</p>
+          <p>©️ 2026 MIGoC My Money Financial Services. All rights reserved.</p>
           <p>Clean access. Trusted service. Modern financial operations.</p>
         </div>
       </footer>
