@@ -59,7 +59,7 @@ function App() {
             />
 
             <div>
-              <h1 className="text-2xl font-black tracking-tight md:text-3xl">Testing MIGoC Version</h1>
+              <h1 className="text-2xl font-black tracking-tight md:text-3xl">MIGoC</h1>
               <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-gray-400 md:text-[10px]">
                 My Money Financial Services
               </p>
